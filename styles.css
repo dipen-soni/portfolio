@@ -450,7 +450,6 @@ body {
     text-decoration: none;
     transition: all var(--transition-normal);
     position: relative;
-    overflow: hidden;
 }
 
 .social-link::before {
@@ -460,12 +459,11 @@ body {
     background: var(--primary-gradient);
     opacity: 0;
     transition: opacity var(--transition-normal);
+    z-index: -1;
+    border-radius: 50%;
 }
 
-.social-link i {
-    position: relative;
-    z-index: 1;
-}
+
 
 .social-link:hover {
     transform: translateY(-5px);
@@ -507,7 +505,6 @@ body {
     text-decoration: none;
     transition: all var(--transition-normal);
     position: relative;
-    overflow: hidden;
     cursor: pointer;
     border: 2px solid transparent;
 }
@@ -534,6 +531,8 @@ body {
     background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
     opacity: 0;
     transition: opacity var(--transition-normal);
+    z-index: -1;
+    border-radius: var(--border-radius-md);
 }
 
 .btn-primary:hover {
@@ -545,11 +544,7 @@ body {
     opacity: 1;
 }
 
-.btn-primary span,
-.btn-primary i {
-    position: relative;
-    z-index: 1;
-}
+
 
 .btn-secondary {
     background: transparent;
@@ -566,6 +561,7 @@ body {
     opacity: 0;
     transition: opacity var(--transition-normal);
     border-radius: var(--border-radius-md);
+    z-index: -1;
 }
 
 .btn-secondary:hover {
@@ -578,11 +574,7 @@ body {
     opacity: 1;
 }
 
-.btn-secondary span,
-.btn-secondary i {
-    position: relative;
-    z-index: 1;
-}
+
 
 .btn:active {
     transform: translateY(-1px);
