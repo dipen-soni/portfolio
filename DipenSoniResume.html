@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Dipen Soni — Lead Software Engineer</title>
+
+    <!-- Use a webfont but fall back to system fonts for PDF reliability -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* --- Basic reset & layout --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            height: 100%;
+            background: #fff;
+        }
+
+        body {
+            font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            color: #2d3748;
+            line-height: 1.45;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Container sizing and printable padding (use mm for predictable PDF margins) */
+        .resume-container {
+            max-width: 850px;
+            margin: 12mm auto;
+            background: #fff;
+            padding: 0;
+        }
+
+        /* --- Header --- */
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 34px 40px;
+            position: relative;
+            overflow: visible;
+            border-radius: 6px;
+        }
+
+        .header::before {
+            content: "";
+            position: absolute;
+            right: -40px;
+            top: -40px;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.07);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .name {
+            font-size: 34px;
+            font-weight: 800;
+            letter-spacing: -0.6px;
+            margin-bottom: 6px;
+        }
+
+        .title {
+            font-size: 16px;
+            opacity: .95;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 8px 18px;
+            font-size: 13px;
+            align-items: center;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            font-weight: 500;
+        }
+
+        .contact-item a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* --- Main content --- */
+        .content {
+            padding: 28px 36px 36px 36px;
+        }
+
+        .section {
+            margin-bottom: 22px;
+        }
+
+        .section-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #4c51bf;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 3px solid #e9eefc;
+        }
+
+        .summary {
+            font-size: 14px;
+            color: #4a5568;
+            text-align: justify;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            gap: 12px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        }
+
+        .skill-category {
+            background: #f7fafc;
+            padding: 12px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+
+        .skill-category-title {
+            font-weight: 700;
+            font-size: 13px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-tag {
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            padding: 6px 10px;
+            border-radius: 16px;
+            font-size: 13px;
+            color: #2d3748;
+        }
+
+        /* Experience */
+        .experience-item {
+            margin-bottom: 18px;
+            padding-left: 22px;
+            position: relative;
+        }
+
+        .experience-item::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 6px;
+            width: 10px;
+            height: 10px;
+            background: #667eea;
+            border-radius: 50%;
+            border: 3px solid #f0f2ff;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            align-items: flex-start;
+        }
+
+        .job-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #2d3748;
+        }
+
+        .company-name {
+            font-size: 14px;
+            color: #4c51bf;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        .date-range {
+            font-size: 13px;
+            color: #718096;
+            white-space: nowrap;
+        }
+
+        .experience-list {
+            margin-top: 8px;
+            list-style: none;
+        }
+
+        .experience-list li {
+            margin-bottom: 6px;
+            padding-left: 18px;
+            position: relative;
+            color: #4a5568;
+            font-size: 14px;
+        }
+
+        .experience-list li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+        }
+
+        .project-highlight {
+            background: #f7fafc;
+            padding: 10px;
+            border-radius: 6px;
+            margin-top: 10px;
+            border-left: 3px solid #667eea;
+        }
+
+
+        .project-title {
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .project-description {
+            font-size: 13px;
+            color: #4a5568;
+            margin-bottom: 6px;
+        }
+
+        /* Education */
+        .education-grid {
+            display: grid;
+            gap: 14px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        }
+
+        .education-item {
+            background: #f7fafc;
+            padding: 12px;
+            border-radius: 8px;
+            border-top: 3px solid #667eea;
+        }
+
+        .degree {
+            font-size: 15px;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 6px;
+        }
+
+        .university {
+            color: #4c51bf;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .education-details {
+            display: flex;
+            justify-content: space-between;
+            color: #718096;
+            font-size: 13px;
+        }
+
+        /* Awards */
+        .awards-grid {
+            display: grid;
+            gap: 12px;
+        }
+
+        .award-item {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            background: linear-gradient(135deg, #fef5e7 0%, #fdebd0 100%);
+            padding: 10px;
+            border-radius: 8px;
+            border-left: 4px solid #f39c12;
+        }
+
+        .award-icon {
+            font-size: 20px;
+        }
+
+        .award-title {
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .award-description {
+            font-size: 13px;
+            color: #4a5568;
+        }
+
+        /* Languages */
+        .languages-grid {
+            display: grid;
+            gap: 12px;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        }
+
+        .language-item {
+            background: #f7fafc;
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+        }
+
+        .language-name {
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .language-level {
+            color: #718096;
+            font-size: 13px;
+        }
+
+        /* --- Print rules to avoid breaks in the middle of sections/items --- */
+        /* Apply to any element that must stay together on one PDF page */
+        /* .avoid-break,
+        .header,
+        .section,
+        .experience-item,
+        .project-highlight,
+        .education-item,
+        .award-item,
+        .language-item {
+            -webkit-column-break-inside: avoid;
+            -webkit-region-break-inside: avoid;
+        } */
+
+        /* Ensure the header color prints */
+        .header {
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        /* if a section would overflow a page, allow a break before the section instead of inside it */
+        .section {
+            page-break-before: avoid;
+        }
+
+        /* smaller adjustments for very long lists — allow a break but prefer not to inside an item */
+        .experience-list {
+            page-break-inside: auto;
+        }
+
+        /* Page size & margins for PDF printing */
+        @page {
+            size: A4;
+            margin: 12mm;
+        }
+
+        /* Hide any interactive hints in print */
+        @media print {
+            .resume-container {
+                margin: 0;
+                max-width: 100%;
+                padding: 0;
+            }
+
+            a::after {
+                content: "";
+            }
+
+            /* don't print URLs after links */
+        }
+
+        /* Responsive tweaks for smaller screens */
+        @media (max-width:720px) {
+            .header {
+                padding: 20px;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .name {
+                font-size: 26px;
+            }
+
+            .title {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="resume-container">
+        <!-- Header (kept together in PDF) -->
+        <header class="header avoid-break" role="banner">
+            <div>
+                <div class="name">DIPEN SONI</div>
+                <div class="title">Lead Software Engineer</div>
+
+                <div class="contact-grid" aria-label="Contact information">
+                    <div class="contact-item">Vadodara, Gujarat, India</div>
+                    <div class="contact-item">+91 9426428310</div>
+                    <div class="contact-item"><a href="mailto:dipensoni@gmail.com">dipensoni@gmail.com</a></div>
+                    <div class="contact-item"><a target="_blank" rel="noopener"
+                            href="https://dipen-soni.netlify.app/">Portfolio</a></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main content -->
+        <main class="content" role="main">
+            <!-- Summary -->
+            <section class="section avoid-break">
+                <h2 class="section-title">Professional Summary</h2>
+                <p class="summary">
+                    Lead Software Engineer with over <strong>16 years of experience</strong> in software development,
+                    specializing in <strong>PHP, Laravel, Go, Python, React, JavaScript</strong>, and databases like
+                    <strong>MySQL, PostgreSQL, MongoDB</strong>. Proven track record designing scalable, secure and
+                    high-performance web applications across e-commerce and enterprise systems. Adept at leadership,
+                    mentoring, and delivering production-grade solutions.
+                </p>
+            </section>
+
+            <!-- Skills -->
+            <section class="section avoid-break">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <div class="skill-category-title">Languages & Frameworks</div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">PHP</span>
+                            <span class="skill-tag">Laravel</span>
+                            <span class="skill-tag">WordPress</span>
+                            <span class="skill-tag">Go</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="skill-category-title">Database & Cloud</div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">PostgreSQL</span>
+                            <span class="skill-tag">MongoDB</span>
+                            <span class="skill-tag">AWS</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Git</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="skill-category-title">Core Competencies</div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">REST APIs</span>
+                            <span class="skill-tag">Full-Stack</span>
+                            <span class="skill-tag">Team Leadership</span>
+                            <span class="skill-tag">Agile</span>
+                            <span class="skill-tag">DevOps</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience -->
+            <section class="section avoid-break">
+                <h2 class="section-title">Professional Experience</h2>
+
+                <article class="experience-item avoid-break">
+                    <div class="experience-header">
+                        <div>
+                            <div class="job-title">Lead Software Engineer</div>
+                            <div class="company-name">IndiaNIC Infotech Ltd, Ahmedabad</div>
+                        </div>
+                        <div class="date-range">Dec 2022 - Present</div>
+                    </div>
+
+                    <ul class="experience-list">
+                        <li>Lead teams building scalable web applications and enforce coding standards.</li>
+                        <li>Architect solutions using modern frameworks, focusing on security and performance.</li>
+                        <li>Mentor engineers across e-commerce, and enterprise projects.</li>
+                    </ul>
+
+                    <div class="project-highlight avoid-break">
+                        <div class="project-title">🚀 Key Projects</div>
+                        <div class="project-description"><strong>Lextra.nl</strong> - Legal-tech platform (Go, Svelte,
+                            MongoDB)</div>
+                        <div class="project-description"><strong>OnlyMaldives.com</strong> - Travel booking platform
+                            (Laravel, PostgreSQL)</div>
+                        <div class="project-description"><strong>Vibe.kmbs.co.in</strong> - KMB Loyalty Program
+                            (Laravel, MySQL).</div>
+                    </div>
+                </article>
+
+                <article class="experience-item avoid-break">
+                    <div class="experience-header">
+                        <div>
+                            <div class="job-title">Team Leader</div>
+                            <div class="company-name">IndaPoint Technologies Pvt Ltd, Vadodara</div>
+                        </div>
+                        <div class="date-range">Jan 2011 - Nov 2022</div>
+                    </div>
+
+                    <ul class="experience-list">
+                        <li>Led cross-functional teams to deliver enterprise-grade web applications.</li>
+                        <li>Managed project lifecycle from requirements to deployment and support.</li>
+                        <li>Introduced Agile & DevOps practices to streamline delivery.</li>
+                    </ul>
+
+                    <div class="project-highlight avoid-break">
+                        <div class="project-title">🚀 Notable Projects</div>
+                        <div class="project-description"><strong>IVYbahrain.com</strong> — WooCommerce e-commerce
+                            platform</div>
+                        <div class="project-description"><strong>TSRNsports.com</strong> — Live broadcasting platform
+                        </div>
+                        <div class="project-description"><strong>JustApply.co.uk</strong> — Applicant tracking system
+                        </div>
+                    </div>
+                </article>
+
+                <article class="experience-item avoid-break">
+                    <div class="experience-header">
+                        <div>
+                            <div class="job-title">Web Developer</div>
+                            <div class="company-name">Biztech Consulting & Solutions, Ahmedabad</div>
+                        </div>
+                        <div class="date-range">Sep 2009 - Jan 2011</div>
+                    </div>
+                    <ul class="experience-list">
+                        <li>Built and maintained PHP/MySQL web apps with responsive front-ends.</li>
+                        <li>Optimized queries and improved app performance.</li>
+                        <li>Collaborated with designers and stakeholders to deliver features.</li>
+                    </ul>
+                </article>
+
+                <article class="experience-item avoid-break">
+                    <div class="experience-header">
+                        <div>
+                            <div class="job-title">Junior Software Developer</div>
+                            <div class="company-name">InfoSoft, Vadodara</div>
+                        </div>
+                        <div class="date-range">Aug 2008 - Aug 2009</div>
+                    </div>
+                    <ul class="experience-list">
+                        <li>Developed Delphi + SQL Server desktop apps and designed DB objects.</li>
+                        <li>Participated in SDLC, version control and deployments.</li>
+                    </ul>
+                </article>
+
+                <article class="experience-item avoid-break">
+                    <div class="experience-header">
+                        <div>
+                            <div class="job-title">Project Trainee</div>
+                            <div class="company-name">CMC Ltd, Ahmedabad</div>
+                        </div>
+                        <div class="date-range">Feb 2008 - Jul 2008</div>
+                    </div>
+                    <ul class="experience-list">
+                        <li>Completed an intensive training program on web tech, DB design and version control.</li>
+                    </ul>
+                </article>
+            </section>
+
+            <!-- Education -->
+            <section class="section avoid-break">
+                <h2 class="section-title">Education</h2>
+                <div class="education-grid">
+                    <div class="education-item avoid-break">
+                        <div class="degree">Master of Computer Applications</div>
+                        <div class="university">Gujarat University</div>
+                        <div class="education-details"><span>2005 - 2008</span><span>66%</span></div>
+                    </div>
+
+                    <div class="education-item avoid-break">
+                        <div class="degree">Bachelor of Computer Applications</div>
+                        <div class="university">M.S. University of Baroda</div>
+                        <div class="education-details"><span>2002 - 2005</span><span>60%</span></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Awards -->
+            <section class="section avoid-break">
+                <h2 class="section-title">Awards & Achievements</h2>
+                <div class="awards-grid">
+                    <div class="award-item avoid-break">
+                        <div class="award-icon">🏆</div>
+                        <div>
+                            <div class="award-title">Academic Excellence</div>
+                            <div class="award-description">1st rank in 6th semester — B.C.A., M.S. University of Baroda
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="award-item avoid-break">
+                        <div class="award-icon">⭐</div>
+                        <div>
+                            <div class="award-title">Employee of the Month</div>
+                            <div class="award-description">Recognized at IndiaNIC Infotech & IndaPoint Technologies for
+                                outstanding performance.</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Languages -->
+            <section class="section avoid-break">
+                <h2 class="section-title">Languages</h2>
+                <div class="languages-grid">
+                    <div class="language-item avoid-break">
+                        <div class="language-name">English</div>
+                        <div class="language-level">Professional</div>
+                    </div>
+                    <div class="language-item avoid-break">
+                        <div class="language-name">Hindi</div>
+                        <div class="language-level">Native</div>
+                    </div>
+                    <div class="language-item avoid-break">
+                        <div class="language-name">Gujarati</div>
+                        <div class="language-level">Native</div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
