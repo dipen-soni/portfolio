@@ -246,3 +246,123 @@
     console.log('%cBuilt with ❤️ using HTML, CSS, and JavaScript', 'color: #a0aec0; font-size: 12px;');
 
 })();
+
+// ===== Counter Animation for Statistics =====
+function animateCounter(element) {
+    const target = parseInt(element.getAttribute('data-target'));
+    const duration = 2000; // 2 seconds
+    const increment = target / (duration / 16); // 60fps
+    let current = 0;
+
+    const updateCounter = () => {
+        current += increment;
+        if (current < target) {
+            element.textContent = Math.floor(current);
+            requestAnimationFrame(updateCounter);
+        } else {
+            element.textContent = target;
+        }
+    };
+
+    updateCounter();
+}
+
+// Observe stats section for counter animation
+const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const statNumbers = entry.target.querySelectorAll('.stat-number');
+            statNumbers.forEach(num => {
+                if (num.textContent === '0') {
+                    animateCounter(num);
+                }
+            });
+            statsObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.5 });
+
+const statsContainer = document.querySelector('.stats-container');
+if (statsContainer) {
+    statsObserver.observe(statsContainer);
+}
+
+// ===== Project Filtering =====
+const filterButtons = document.querySelectorAll('.filter-btn');
+const projectCards = document.querySelectorAll('.project-card');
+
+// Count projects by technology
+function updateFilterCounts() {
+    filterButtons.forEach(btn => {
+        const filter = btn.getAttribute('data-filter');
+        let count = 0;
+
+        if (filter === 'all') {
+            count = projectCards.length;
+        } else {
+            projectCards.forEach(card => {
+                const techTags = card.querySelectorAll('.project-tech-tag');
+                const hasTech = Array.from(techTags).some(tag => 
+                    tag.textContent.trim() === filter
+                );
+                if (hasTech) count++;
+            });
+        }
+
+        const countSpan = btn.querySelector('.filter-count');
+        if (countSpan) {
+            countSpan.textContent = `(${count})`;
+        }
+    });
+}
+
+// Filter projects
+function filterProjects(filter) {
+    projectCards.forEach(card => {
+        if (filter === 'all') {
+            card.classList.remove('hidden');
+            setTimeout(() => {
+                card.style.opacity = '1';
+                card.style.transform = 'scale(1)';
+            }, 10);
+        } else {
+            const techTags = card.querySelectorAll('.project-tech-tag');
+            const hasTech = Array.from(techTags).some(tag => 
+                tag.textContent.trim() === filter
+            );
+
+            if (hasTech) {
+                card.classList.remove('hidden');
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'scale(1)';
+                }, 10);
+            } else {
+                card.style.opacity = '0';
+                card.style.transform = 'scale(0.9)';
+                setTimeout(() => {
+                    card.classList.add('hidden');
+                }, 300);
+            }
+        }
+    });
+}
+
+// Add click event to filter buttons
+filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        // Remove active class from all buttons
+        filterButtons.forEach(b => b.classList.remove('active'));
+        // Add active class to clicked button
+        btn.classList.add('active');
+        
+        // Get filter value and filter projects
+        const filter = btn.getAttribute('data-filter');
+        filterProjects(filter);
+    });
+});
+
+// Initialize filter counts on load
+if (filterButtons.length > 0) {
+    updateFilterCounts();
+}
