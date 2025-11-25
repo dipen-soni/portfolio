@@ -152,7 +152,7 @@
                     </div>
 
                     <div class="cta-buttons">
-                        <a href="DipenSoniResume.pdf" download class="btn btn-primary" id="downloadCV" target="_blank">
+                        <a href="DipenSoniCV.pdf" download class="btn btn-primary" id="downloadCV" target="_blank">
                             <i class="fas fa-download"></i>
                             <span>Download CV</span>
                         </a>
@@ -161,6 +161,46 @@
                             <i class="fas fa-envelope"></i>
                             <span>Hire Me</span>
                         </a>
+                    </div>
+
+                    <!-- Performance Statistics -->
+                    <div class="stats-container">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-number" data-target="16">0</div>
+                                <div class="stat-label">Years Experience</div>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-project-diagram"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-number" data-target="40">0</div>
+                                <div class="stat-label">Projects Completed</div>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-number" data-target="15">0</div>
+                                <div class="stat-label">Technologies</div>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-number" data-target="5">0</div>
+                                <div class="stat-label">Companies</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -191,9 +231,8 @@
                                     solutions using modern frameworks and technologies, ensuring code quality, security,
                                     and best practices.
                                     Mentoring junior developers and driving technical excellence across projects in
-                                    e-commerce, e-learning,
-                                    and enterprise domains.</p>
-                                <div class="tech-tags">
+                                    e-commerce, and enterprise domains.</p>
+                                <!-- <div class="tech-tags">
                                     <span class="tech-tag">PHP</span>
                                     <span class="tech-tag">Laravel</span>
                                     <span class="tech-tag">Go</span>
@@ -204,7 +243,7 @@
                                     <span class="tech-tag">MySQL</span>
                                     <span class="tech-tag">PostgreSQL</span>
                                     <span class="tech-tag">MongoDB</span>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -226,12 +265,12 @@
                                     Implemented agile
                                     methodologies and DevOps practices to optimize development workflows and improve
                                     team productivity.</p>
-                                <div class="tech-tags">
+                                <!-- <div class="tech-tags">
                                     <span class="tech-tag">Team Leadership</span>
                                     <span class="tech-tag">Agile/Scrum</span>
                                     <span class="tech-tag">DevOps</span>
                                     <span class="tech-tag">Architecture</span>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -268,10 +307,8 @@
                                 <div class="job-date">Aug 2008 - Aug 2009</div>
                             </div>
                             <div class="card-body">
-                                <p>Contributed to web application development projects, focusing on front-end and
-                                    back-end integration.
-                                    Gained hands-on experience with database design, API development, and version
-                                    control systems.</p>
+                                <p>Developed Delphi + SQL Server desktop apps and designed DataBase. Participated in
+                                    SDLC, version control and deployments.</p>
                             </div>
                         </div>
                     </div>
@@ -288,8 +325,7 @@
                             </div>
                             <div class="card-body">
                                 <p>Completed intensive training program in software development. Worked on real-world
-                                    projects,
-                                    learning industry best practices and gaining foundational knowledge in web
+                                    projects, learning industry best practices and gaining foundational knowledge in web
                                     technologies and databases.</p>
                             </div>
                         </div>
@@ -364,11 +400,11 @@
                             </div>
                             <div class="skill-icon" data-tooltip="Go">
                                 <i class="fab fa-golang"></i>
-                                <span>Go</span>
+                                <span>Go(RestAPIs)</span>
                             </div>
                             <div class="skill-icon" data-tooltip="Python">
                                 <i class="fab fa-python"></i>
-                                <span>Python</span>
+                                <span>Python(RestAPIs)</span>
                             </div>
                             <div class="skill-icon" data-tooltip="JavaScript">
                                 <i class="fab fa-js"></i>
@@ -414,15 +450,6 @@
                     <div class="skills-category">
                         <h3 class="category-title">Core Competencies</h3>
                         <div class="competencies-list">
-                            <div class="competency-item">
-                                <div class="competency-icon">
-                                    <i class="fas fa-check-circle"></i>
-                                </div>
-                                <div class="competency-text">
-                                    <strong>Architecture & System Design</strong>
-                                    <p>Designing scalable, maintainable software architectures</p>
-                                </div>
-                            </div>
                             <div class="competency-item">
                                 <div class="competency-icon">
                                     <i class="fas fa-check-circle"></i>
@@ -498,6 +525,35 @@
                     <span class="title-number">05.</span>
                     Projects
                 </h2>
+
+                <!-- Project Filters -->
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all">
+                        All <span class="filter-count"></span>
+                    </button>
+                    <button class="filter-btn" data-filter="Laravel">
+                        Laravel <span class="filter-count"></span>
+                    </button>
+                    <button class="filter-btn" data-filter="PHP">
+                        PHP <span class="filter-count"></span>
+                    </button>
+                    <button class="filter-btn" data-filter="Go">
+                        Go <span class="filter-count"></span>
+                    </button>
+                    <button class="filter-btn" data-filter="WordPress">
+                        WordPress <span class="filter-count"></span>
+                    </button>
+                    <button class="filter-btn" data-filter="MySQL">
+                        MySQL <span class="filter-count"></span>
+                    </button>
+                    <button class="filter-btn" data-filter="MongoDB">
+                        MongoDB <span class="filter-count"></span>
+                    </button>
+                    <button class="filter-btn" data-filter="PostgreSQL">
+                        PostgreSQL <span class="filter-count"></span>
+                    </button>
+                </div>
+
                 <div class="projects-grid">
 
                     <div class="card project-card">
@@ -517,6 +573,8 @@
                             scalability, and security, and implemented Go-based backend services for data processing and
                             case scraping.
                         </div>
+
+                        <button class="load-more-btn">Load more</button>
                         <div class="project-tech-stack">
                             <span class="project-tech-tag">Go</span>
                             <span class="project-tech-tag">MongoDB</span>
@@ -546,6 +604,8 @@
                             authentication. The platform is optimized for performance, ensuring a responsive and
                             seamless user experience across all devices.
                         </div>
+
+                        <button class="load-more-btn">Load more</button>
                         <div class="project-tech-stack">
                             <span class="project-tech-tag">Laravel</span>
                             <span class="project-tech-tag">PostgreSQL</span>
@@ -573,8 +633,10 @@
                             real-world content and English language assessments to help learners build confidence and
                             stay prepared for a rapidly changing world.
                         </div>
+
+                        <button class="load-more-btn">Load more</button>
                         <div class="project-tech-stack">
-                            <span class="project-tech-tag">Laravel</span>
+                            <span class="project-tech-tag">PHP (Moodle)</span>
                             <span class="project-tech-tag">MySQL</span>
                             <span class="project-tech-tag">MongoDB</span>
                             <span class="project-tech-tag">NodeJs</span>
@@ -602,6 +664,8 @@
                             Notably, the top 100 performers receive certificates quarterly, semi-annually, and annually
                             based on their leaderboard rankings.
                         </div>
+
+                        <button class="load-more-btn">Load more</button>
                         <div class="project-tech-stack">
                             <span class="project-tech-tag">Laravel</span>
                             <span class="project-tech-tag">MySQL</span>
@@ -627,6 +691,8 @@
                             the site provides all the features, required for a shopping site and makeup-related articles
                             published on the site, so users get an idea related to the product
                         </div>
+
+                        <button class="load-more-btn">Load more</button>
                         <div class="project-tech-stack">
                             <span class="project-tech-tag">Laravel</span>
                             <span class="project-tech-tag">MySQL</span>
@@ -650,8 +716,10 @@
                             to upload, share, view, like, dislike, watchlist, report, search, etc. functionalities with
                             videos related to smoking weed/tobacco. Elastic search, the third-party tool is used to
                             improve fast search functionalities. All the videos are stored in the other third-party tool
-                            JWPlayer, List all videos on the site, using JWPlayers’s API
+                            JWPlayer, List all videos on the site, using JWPlayers's API
                         </div>
+
+                        <button class="load-more-btn">Load more</button>
                         <div class="project-tech-stack">
                             <span class="project-tech-tag">Laravel</span>
                             <span class="project-tech-tag">MySQL</span>
@@ -676,6 +744,8 @@
                             This site is based on online shopping with the help of the WooCommerce plugin. Users can buy
                             flowers, chocolates, etc from this site.
                         </div>
+
+                        <button class="load-more-btn">Load more</button>
                         <div class="project-tech-stack">
                             <span class="project-tech-tag">MySQL</span>
                             <span class="project-tech-tag">WordPress</span>
@@ -696,8 +766,10 @@
                         <div class="project-description">
                             The Functionality of this site is like Amazon , Flipkart , etc. But this site only sells
                             digital content/ documents . Seller/publisher signup, add digital products, buyer signup ,
-                            and buy required material. Stripe’s connect has been used to transfer sellers' payout.
+                            and buy required material. Stripe's connect has been used to transfer sellers' payout.
                         </div>
+
+                        <button class="load-more-btn">Load more</button>
                         <div class="project-tech-stack">
                             <span class="project-tech-tag">Laravel</span>
                             <span class="project-tech-tag">MySQL</span>
@@ -717,10 +789,12 @@
                         <div class="project-role">Developer</div>
                         <div class="project-description">
                             TSRNsports, leads the state of Texas in broadcasting High School and Junior College
-                            athletics.  Front-end developed in WordPress and back-end &amp; REST APIs developed in
+                            athletics. Front-end developed in WordPress and back-end &amp; REST APIs developed in
                             laravel. WordPress and phones both use APIs for display data like watching games or
                             listening to commentary of live games.
                         </div>
+
+                        <button class="load-more-btn">Load more</button>
                         <div class="project-tech-stack">
                             <span class="project-tech-tag">Laravel</span>
                             <span class="project-tech-tag">MySQL</span>
@@ -741,14 +815,16 @@
                         </div>
                         <div class="project-role">Developer</div>
                         <div class="project-description">
-                            User can buy and view live-streaming of Florida Panthers’ Stadium/Mezzanine/Den Rinks’
+                            User can buy and view live-streaming of Florida Panthers' Stadium/Mezzanine/Den Rinks'
                             events and games. Users select the required schedule of events / games and pay for that.
                             They can view recorded videos on JWPlayer for 1 month to keep this recorded video permanent
                             in his/her profile, users can subscribe/ pay for that. User can view their recorded videos
-                            with multiple platforms like smartphones, Amazon Fire TV , Roku TV ,  Xbox, etc. Curtain
+                            with multiple platforms like smartphones, Amazon Fire TV , Roku TV , Xbox, etc. Curtain
                             up/down on the player, functionality is also given to prevent to view practice sessions of
                             players, the team can set the curtain up/down for live streaming on/off.
                         </div>
+
+                        <button class="load-more-btn">Load more</button>
                         <div class="project-tech-stack">
                             <span class="project-tech-tag">PHP</span>
                             <span class="project-tech-tag">MySQL</span>
@@ -771,6 +847,8 @@
                             players practice session is going on, but the coach of the team can view practice session
                             using this site.
                         </div>
+
+                        <button class="load-more-btn">Load more</button>
                         <div class="project-tech-stack">
                             <span class="project-tech-tag">PHP</span>
                             <span class="project-tech-tag">MySQL</span>
@@ -791,10 +869,12 @@
                         </div>
                         <div class="project-role">Developer</div>
                         <div class="project-description">
-                            This site is a customized replication of appliviews (Applicant tracking system, indapoint’s
+                            This site is a customized replication of appliviews (Applicant tracking system, indapoint's
                             product). Candidates can register, and apply for jobs, admin can view applicants, set
                             interviews for that , etc functionality provided by appliview.
                         </div>
+
+                        <button class="load-more-btn">Load more</button>
                         <div class="project-tech-stack">
                             <span class="project-tech-tag">PHP</span>
                             <span class="project-tech-tag">MySQL</span>
@@ -815,10 +895,12 @@
                         </div>
                         <div class="project-role">Developer</div>
                         <div class="project-description">
-                            This site is a customized replication of appliviews (Applicant tracking system, indapoint’s
+                            This site is a customized replication of appliviews (Applicant tracking system, indapoint's
                             product). Candidates can register, and apply for jobs, admin can view applicants, set
                             interviews for that , etc functionality provided by appliview.
                         </div>
+
+                        <button class="load-more-btn">Load more</button>
                         <div class="project-tech-stack">
                             <span class="project-tech-tag">PHP</span>
                             <span class="project-tech-tag">MySQL</span>
@@ -844,8 +926,11 @@
                             frames, side of frames, louver size, tilt bar, panel, hinge , etc. After the selection of
                             all the required parameters, we create an image of shutters. Users can pay and buy shutters.
                         </div>
+
+                        <button class="load-more-btn">Load more</button>
                         <div class="project-tech-stack">
                             <span class="project-tech-tag">PHP</span>
+                            <span class="project-tech-tag">Laravel</span>
                             <span class="project-tech-tag">MySQL</span>
 
                         </div>
@@ -870,9 +955,9 @@
                             text chat use phplivesupport.com. eWell app is also available on Google Play and the Apple
                             App Store . Whichever REST APIs are used by apps that are all developed in PHP.
                         </div>
+                        <button class="load-more-btn">Load more</button>
                         <div class="project-tech-stack">
                             <span class="project-tech-tag">PHP</span>
-                            <span class="project-tech-tag">Go</span>
                             <span class="project-tech-tag">MySQL</span>
 
                         </div>
@@ -895,6 +980,8 @@
                             top category . Users get diploma certificates after completing the final exam. This site is
                             like an online exam related to health and wellness.
                         </div>
+
+                        <button class="load-more-btn">Load more</button>
                         <div class="project-tech-stack">
                             <span class="project-tech-tag">PHP</span>
                             <span class="project-tech-tag">MySQL</span>
@@ -919,6 +1006,8 @@
                             accept affordable and reasonable bids . A rating kind of facility is also added to the site
                             to choose proper outsourcers and helpers.
                         </div>
+
+                        <button class="load-more-btn">Load more</button>
                         <div class="project-tech-stack">
                             <span class="project-tech-tag">PHP</span>
                             <span class="project-tech-tag">MySQL</span>
@@ -941,6 +1030,8 @@
                             uploads recipes book at admin side, a user pays either of way Card or SMS, as soon as the
                             payment completed, a user gets an email attached with this .pdf file recipes book.
                         </div>
+
+                        <button class="load-more-btn">Load more</button>
                         <div class="project-tech-stack">
                             <span class="project-tech-tag">PHP</span>
                             <span class="project-tech-tag">MySQL</span>
@@ -965,8 +1056,11 @@
                             marketplace module, I have developed an ad marketplace module to fulfill the requirements of
                             the client.
                         </div>
+
+                        <button class="load-more-btn">Load more</button>
                         <div class="project-tech-stack">
                             <span class="project-tech-tag">PHP</span>
+                            <span class="project-tech-tag">socialengine.net</span>
                             <span class="project-tech-tag">MySQL</span>
 
                         </div>
@@ -993,6 +1087,8 @@
                             period. The staff are categorized according to their skills. Working sensors can quickly see
                             if any skills missing while it's quick and easy to find the right people for the right task.
                         </div>
+
+                        <button class="load-more-btn">Load more</button>
                         <div class="project-tech-stack">
                             <span class="project-tech-tag">PHP</span>
                             <span class="project-tech-tag">MySQL</span>
@@ -1016,9 +1112,11 @@
                             quickly reach out to all employees via SMS and email. Pplanner mini keeps track of when
                             workers report in while you take care of other more important tasks. As soon as an employer
                             in the workforce reports that they can work on a broadcast vacancy, a worker will receive a
-                            message via SMS. When employers wish for employees’ results and select a suitable candidate
+                            message via SMS. When employers wish for employees' results and select a suitable candidate
                             for the job.
                         </div>
+
+                        <button class="load-more-btn">Load more</button>
                         <div class="project-tech-stack">
                             <span class="project-tech-tag">PHP</span>
                             <span class="project-tech-tag">MySQL</span>
@@ -1040,11 +1138,13 @@
                             Dandyville.se is a website that uses product feed files to add products to the website. This
                             different product feed file is added by the admin when creating new sellers. This site can
                             have one seller on one product and many sellers for other products. If two sellers have the
-                            same product it will be the prioritized sellers’ product that will be visible. This site
+                            same product it will be the prioritized sellers' product that will be visible. This site
                             also has links from the product page to the seller product page. This way we can gather a
                             lot of traffic to Dandyville.se and then charge the sellers X amount for every click to
                             their website. The seller is usually a webshop with products.
                         </div>
+
+                        <button class="load-more-btn">Load more</button>
                         <div class="project-tech-stack">
                             <span class="project-tech-tag">PHP</span>
                             <span class="project-tech-tag">MySQL</span>
@@ -1069,6 +1169,8 @@
                             or a company. All videos are private videos and uploaded to Vimeo and they fetch with the
                             help of Vimeo apis.
                         </div>
+
+                        <button class="load-more-btn">Load more</button>
                         <div class="project-tech-stack">
                             <span class="project-tech-tag">PHP</span>
                             <span class="project-tech-tag">MySQL</span>
@@ -1087,13 +1189,15 @@
                         </div>
                         <div class="project-role">Developer</div>
                         <div class="project-description">
-                            This site is for Australian users . This site brings deals and offers for the user.  Users
+                            This site is for Australian users . This site brings deals and offers for the user. Users
                             select their city and buy the required deals. As soon as the payment is completed deals'
                             coupon and invoice hit in their email account. Every weekday comes new deals. Subscribed
                             users of this site get emails related to deals with the help of MailChimp . Email template
                             generated at admin site and set in MailChimp . The admin side contains lots of reports and
                             graphs for admin users .
                         </div>
+
+                        <button class="load-more-btn">Load more</button>
                         <div class="project-tech-stack">
                             <span class="project-tech-tag">PHP</span>
                             <span class="project-tech-tag">MySQL</span>
@@ -1118,9 +1222,10 @@
                             products and make payments using the payment gateway. All the products are handled from the
                             Admin site.
                         </div>
+
+                        <button class="load-more-btn">Load more</button>
                         <div class="project-tech-stack">
                             <span class="project-tech-tag">PHP</span>
-                            <span class="project-tech-tag">Go</span>
                             <span class="project-tech-tag">MySQL</span>
 
                         </div>
@@ -1138,12 +1243,14 @@
                         </div>
                         <div class="project-role">Developer</div>
                         <div class="project-description">
-                            Gangaji Foundation is based in the USA.  This site handles two major modules online shopping
+                            Gangaji Foundation is based in the USA. This site handles two major modules online shopping
                             and online event participation etc. In online shopping CDs , DVDs , Books , etc buy user
                             from front-end and in online Event module contains event registration, online meetings,
                             small group series, small group retreats, etc. According to the event, the user pays for
                             that. Everything is handled from the Admin site
                         </div>
+
+                        <button class="load-more-btn">Load more</button>
                         <div class="project-tech-stack">
                             <span class="project-tech-tag">PHP</span>
                             <span class="project-tech-tag">MySQL</span>
@@ -1170,6 +1277,8 @@
                             changes as per user requirements in existing modules which have already been provided by
                             SugarCRM.
                         </div>
+
+                        <button class="load-more-btn">Load more</button>
                         <div class="project-tech-stack">
                             <span class="project-tech-tag">PHP</span>
                             <span class="project-tech-tag">MySQL</span>
@@ -1195,6 +1304,8 @@
                             remove some unnecessary fields, and make email functionality. Made some fields mandatory
                             etc. are the main job.
                         </div>
+
+                        <button class="load-more-btn">Load more</button>
                         <div class="project-tech-stack">
                             <span class="project-tech-tag">PHP</span>
                             <span class="project-tech-tag">MySQL</span>
@@ -1221,9 +1332,10 @@
                             questions and answers which all things are handled by the admin side. The Pier section is
                             one kind of plugin (like Pages, Posts , etc of Word Press) at the back-end side.
                         </div>
+
+                        <button class="load-more-btn">Load more</button>
                         <div class="project-tech-stack">
                             <span class="project-tech-tag">PHP</span>
-                            <span class="project-tech-tag">Go</span>
                             <span class="project-tech-tag">MySQL</span>
 
                         </div>
@@ -1245,6 +1357,8 @@
                             This site is used for payment methods as PayPal Process. Not the whole site was developed by
                             me only the shopping cart section was developed by me as per user requirements .
                         </div>
+
+                        <button class="load-more-btn">Load more</button>
                         <div class="project-tech-stack">
                             <span class="project-tech-tag">PHP</span>
                             <span class="project-tech-tag">MySQL</span>
@@ -1271,6 +1385,8 @@
                             .mp3 and .wav format songs. To save a playlist with a popup window, to display the
                             information about songs on the right side’s panel , etc. thing developed by me.
                         </div>
+
+                        <button class="load-more-btn">Load more</button>
                         <div class="project-tech-stack">
                             <span class="project-tech-tag">PHP</span>
                             <span class="project-tech-tag">MySQL</span>
@@ -1297,6 +1413,8 @@
                             registered on the site. Then they will download the pdf files, take part in events, job
                             seeker apply with their resume , etc. things done from the front side.
                         </div>
+
+                        <button class="load-more-btn">Load more</button>
                         <div class="project-tech-stack">
                             <span class="project-tech-tag">PHP</span>
                             <span class="project-tech-tag">MySQL</span>
@@ -1321,6 +1439,8 @@
                             on the admin side. To give a vote to a particular showcase users have to register at the
                             front side.
                         </div>
+
+                        <button class="load-more-btn">Load more</button>
                         <div class="project-tech-stack">
                             <span class="project-tech-tag">PHP</span>
                             <span class="project-tech-tag">MySQL</span>
@@ -1345,6 +1465,8 @@
                             maintain Top menus, left sidebar, bottom panel , and content pages from the admin part, as
                             per their requirement.
                         </div>
+
+                        <button class="load-more-btn">Load more</button>
                         <div class="project-tech-stack">
                             <span class="project-tech-tag">PHP</span>
                             <span class="project-tech-tag">MySQL</span>
@@ -1368,6 +1490,8 @@
                             menus, bottom panel , and content pages from the admin part, as per their requirement. This
                             site was developed for Listing purposes . Listing likes lands etc.
                         </div>
+
+                        <button class="load-more-btn">Load more</button>
                         <div class="project-tech-stack">
                             <span class="project-tech-tag">PHP</span>
                             <span class="project-tech-tag">MySQL</span>
@@ -1393,6 +1517,8 @@
                             the left menu, news panel, bottom panel , and content pages from the admin part, as per
                             their requirement.
                         </div>
+
+                        <button class="load-more-btn">Load more</button>
                         <div class="project-tech-stack">
                             <span class="project-tech-tag">PHP</span>
                             <span class="project-tech-tag">MySQL</span>
@@ -1416,6 +1542,8 @@
                             All the data of these distributors are dynamically imported and mapped in these CAMIS and
                             reports are generated in the format of MTD (Month To Date) and YTD (Year To Date).
                         </div>
+
+                        <button class="load-more-btn">Load more</button>
                         <div class="project-tech-stack">
                             <span class="project-tech-tag">Delphi7</span>
                             <span class="project-tech-tag">SQL Server</span>
@@ -1440,6 +1568,7 @@
                             medicines samples given to the Doctor , and generate summary reports day by day or whole
                             months of all the users.
                         </div>
+                        <button class="load-more-btn">Load more</button>
                         <div class="project-tech-stack">
                             <span class="project-tech-tag">Delphi7</span>
                             <span class="project-tech-tag">SQL Server</span>
@@ -1462,6 +1591,7 @@
                             Products. Here MR using images creates a slide show for every doctor and advertises the
                             products of their company.
                         </div>
+                        <button class="load-more-btn">Load more</button>
                         <div class="project-tech-stack">
                             <span class="project-tech-tag">Delphi7</span>
                             <span class="project-tech-tag">MS Access</span>
@@ -1484,6 +1614,7 @@
                             complexity factor and men hours , it generated the estimation report. A report is just like
                             a quotation.
                         </div>
+                        <button class="load-more-btn">Load more</button>
                         <div class="project-tech-stack">
                             <span class="project-tech-tag">Delphi7</span>
                             <span class="project-tech-tag">SQL Server</span>
@@ -1506,6 +1637,7 @@
                             the Directorate of Pension and Provident fund office, Gandhinagar. Pension Processing is a
                             part of the Finance Management System being developed for DPPF.
                         </div>
+                        <button class="load-more-btn">Load more</button>
                         <div class="project-tech-stack">
                             <span class="project-tech-tag">JSP</span>
                             <span class="project-tech-tag">Servlet</span>
@@ -1530,6 +1662,7 @@
                             process of entering, editing , and displaying the required data from the database. It should
                             generate a summary report for all plants too.
                         </div>
+                        <button class="load-more-btn">Load more</button>
                         <div class="project-tech-stack">
                             <span class="project-tech-tag">JSP</span>
                             <span class="project-tech-tag">MS Access</span>
@@ -1551,6 +1684,31 @@
 
     <!-- Scripts -->
     <script src="scripts.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const descriptions = document.querySelectorAll('.project-description');
+
+            descriptions.forEach(desc => {
+                const button = desc.nextElementSibling; // The load-more-btn is immediately after description? No, there might be whitespace.
+                // Actually, I inserted the button before .project-tech-stack.
+                // Let's find the button within the same parent .project-card
+                const card = desc.closest('.project-card');
+                const btn = card.querySelector('.load-more-btn');
+
+                if (desc.scrollHeight > 100) { // 100px is the max-height defined in CSS
+                    desc.classList.add('collapsed');
+                    btn.style.display = 'block';
+                }
+
+                if (btn) {
+                    btn.addEventListener('click', function () {
+                        const isCollapsed = desc.classList.toggle('collapsed');
+                        btn.textContent = isCollapsed ? 'Load more' : 'Load less';
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
