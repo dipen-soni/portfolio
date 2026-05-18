@@ -33,21 +33,6 @@ I don't just write code; I design systems that scale, optimize developer workflo
 
 ---
 
-### 📂 Featured Open Source & Projects
-
-*   **[event-booking-system](https://github.com/dipen-soni/event-booking-system)**: A clean, highly optimized Event Booking REST API built with **Laravel 12**, demonstrating modern clean-code architecture, full test suites, and database performance tuning.
-
----
-
-### 📊 GitHub Activity
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=dipen-soni&show_icons=true&theme=tokyonight" width="49%" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=dipen-soni&theme=tokyonight" width="49%" />
-</p>
-
----
-
 ### 💬 Let's Connect
 
 If you'd like to collaborate on an open-source project, discuss performance/caching strategies, or just talk shop, feel free to reach out:
