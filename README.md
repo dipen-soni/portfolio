@@ -1,4 +1,4 @@
-# Hi, I'm Dipen Soni 👋
+# Hi, I'm Dipen Soni
 
 I am a veteran **Lead Software Engineer** and **Web Architect** with over **17 years of hands-on experience** in crafting high-performance, resilient, and business-focused web systems.
 
@@ -36,8 +36,7 @@ I don't just write code; I design systems that scale, optimize developer workflo
 ### 📊 GitHub Activity
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=dipen-soni&show_icons=true&theme=tokyonight" width="49%" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=dipen-soni&theme=tokyonight" width="49%" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=dipen-soni&theme=tokyonight" />
 </p>
 
 ---
